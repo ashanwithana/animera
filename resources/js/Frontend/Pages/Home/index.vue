@@ -1,6 +1,6 @@
 <template>
     <AppLayout>
-       
+       <h1>hello world</h1>
     </AppLayout>
 </template>
 <script>
