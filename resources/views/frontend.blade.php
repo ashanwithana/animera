@@ -3,7 +3,7 @@
 @php
 $settings = [
 'app_name' => App\Models\Settings::where(['key' => 'app_name'])->first()->value,
-'name' => 'E-market.com',
+'name' => 'Animera.com',
 'app_description' => App\Models\Settings::where(['key' => 'app_description'])->first()->value,
 'app_keywords' => '',
 'app_author' => '',

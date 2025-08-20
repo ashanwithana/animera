@@ -1,6 +1,8 @@
 
 <template>
-  <p class="text-center copyright-text position-fixed">@animera2025</p>
+  <div>
+    <p class="text-center copyright-text position-fixed">@animera2025</p>
+  </div>
 </template>
 
 <script>

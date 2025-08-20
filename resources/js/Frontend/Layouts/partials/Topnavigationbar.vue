@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar position-fixed w-100">
+  <nav class="navbar position-fixed w-100" style="background-color: transparent;">
     <div class="container-fluid nav-container">
       <Link :href="route('index')" class="navbar-brand">
         <img src="images/animera-logo.png" alt="animera-logo" width="90">

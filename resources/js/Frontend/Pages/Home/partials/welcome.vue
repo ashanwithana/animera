@@ -16,8 +16,11 @@
                     <div class="btn-wrapper pb-4">
                         <PrimaryButton class="qr-btn py-2 px-4 fw-semibold w-100" label="Generate QR Code" />
                     </div>
-                    <div class="btn-wrapper">
+                    <div class="btn-wrapper pb-4">
                         <PrimaryButton class="home-btn py-2 px-4 fw-semibold w-100" label="Home" />
+                    </div>
+                    <div class="btn-wrapper">
+                        <Link class="login-btn" :href="route('login')">Login</Link>
                     </div>
                 </div>
                     </div>
@@ -31,6 +34,7 @@
 </section>
 </template>
 <script>
+import { Link } from '@inertiajs/inertia-vue3';
 import PrimaryButton from '../../../components/PrimaryButton.vue';
 import PrimaryHeading from '../../../components/PrimaryHeading.vue';
 
@@ -39,7 +43,8 @@ export default {
 
     components: {
         PrimaryHeading,
-        PrimaryButton
+        PrimaryButton,
+        Link
     },
     data() {
         return {

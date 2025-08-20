@@ -1,6 +1,7 @@
 * {
   font-family: "Roboto", sans-serif;
   text-decoration: none !important;
+  background-color: #E8F7FF;
 }
 
 .secondary-font {
@@ -54,9 +55,54 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 .navbar {
-  z-index: 1050; 
+  z-index: 1050;
 }
-.nav-container{
+
+.nav-container {
   justify-content: flex-end !important;
+}
+
+.login-btn {
+  text-decoration: underline !important;
+}
+
+.login-welcome-text {
+  font-family: "Enriqueta", serif !important;
+  font-weight: 600;
+}
+
+.card-subtitle-login {
+  font-family: "Enriqueta", serif !important;
+  font-weight: 600;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.show-hide-btn {
+  right: 0 !important;
+  top: 6px !important;
+}
+
+.forgot-pwd {
+  font-size: 12px;
+  font-weight: 300;
+  color: #D885A3;
+}
+
+.input-field {
+  background-color: white !important;
+  border-radius: 0px;
+  border-color: white !important;
+}
+
+.input-field:active {
+  background-color: white !important;
+}
+
+.input-field:focus {
+  background-color: white !important;
 }
