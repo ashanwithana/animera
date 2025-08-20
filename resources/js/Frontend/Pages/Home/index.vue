@@ -1,6 +1,6 @@
 <template>
     <AppLayout>
-    <div>
+    <div class="container-fluid">
         <Welcome />
     </div>
     </AppLayout>
