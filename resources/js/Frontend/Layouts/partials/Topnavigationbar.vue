@@ -1,5 +1,11 @@
 <template>
-<h1>navbar</h1>
+  <nav class="navbar bg-white position-fixed" style="right: 0;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/animera-logo.png" alt="Bootstrap" width="90">
+      </a>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -12,12 +18,10 @@ export default {
   },
   data() {
     return {
-      
+
     }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

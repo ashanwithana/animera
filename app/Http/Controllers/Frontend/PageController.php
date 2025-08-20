@@ -15,5 +15,9 @@ use Inertia\Inertia;
 
 class PageController extends Controller
 {
-   //
+   public function login()
+    {
+        
+        return Inertia::render('Login/index');
+    }
 }

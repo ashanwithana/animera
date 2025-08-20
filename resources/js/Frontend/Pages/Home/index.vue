@@ -1,26 +1,33 @@
 <template>
     <AppLayout>
-       <h1>hello world</h1>
+    <div>
+        <Welcome />
+    </div>
     </AppLayout>
 </template>
 <script>
-
+import Welcome from './partials/welcome.vue';
+import AppLayout from '../../Layouts/AppLayout.vue';
 
 
 
 export default {
+
     components: {
-        AppLayout
+        AppLayout,
+        Welcome
     },
-    data(){
-        return{
-           
+    data() {
+        return {
+
         }
     },
-    methods:{
-        
+    methods: {
+
     }
 };
 </script>
 
-<style></style>
+<style scoped>
+
+</style>

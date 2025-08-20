@@ -1,6 +1,5 @@
-
 <template>
-  <p class="text-center copyright-text position-fixed">@animera2025</p>
+  <h1>login</h1>
 </template>
 
 <script>
