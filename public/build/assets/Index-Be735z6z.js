@@ -1,0 +1,1 @@
+import{S as t,U as p,m as e,p as n}from"./index-9RE6n9LQ.js";import{_ as r}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{A as s}from"./AppLayout-B8NHLmW9.js";const a={components:{AppLayout:s,Link:t},props:{},data(){return{}},mounted(){}};function c(m,_,u,f,d,i){const o=p("AppLayout");return e(),n(o)}const L=r(a,[["render",c]]);export{L as default};
