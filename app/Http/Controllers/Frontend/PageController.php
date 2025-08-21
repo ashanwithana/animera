@@ -20,4 +20,19 @@ class PageController extends Controller
         
         return Inertia::render('Login/index');
     }
+   public function staff()
+    {
+        
+        return Inertia::render('Staff/index');
+    }
+   public function pets()
+    {
+        
+        return Inertia::render('Pets/index');
+    }
+   public function animera()
+    {
+        
+        return Inertia::render('Animera/index');
+    }
 }

@@ -21,16 +21,19 @@
                 <div class="mb-4">
                   <div class="w-100 position-relative">
                     <input :type="showPassword ? 'text' : 'password'" class="form-control input-field"
-                      id="password" v-model="password">
+                      id="password" v-model="password" placeholder="Password">
                     <span class="position-absolute show-hide-btn" style="background-color: transparent;">
                       <label type="button" class="input-group-text border-0" for="checkbox1"
                         style="background-color: transparent;"><i
                           :class="showPassword ? 'fa-regular fa-eye' : 'fa-regular fa-eye-slash'" class="pe-2"
-                          style="color: #D885A3; background-color:transparent"></i></label>
+                          style="color: #D885A3; background-color:transparent; font-size:12px"></i></label>
                       <input type="checkbox" class="d-none" id="checkbox1" v-model="showPassword">
                     </span>
                   </div>
                   <Link class="forgot-pwd">Forgot Password ?</Link>
+                </div>
+                <div class="login-btn-wrapper">
+                  <PrimaryButton class="home-btn w-100 rounded-0" label="Login" />
                 </div>
               </div>
             </div>
@@ -46,17 +49,17 @@
 import { Link } from '@inertiajs/inertia-vue3';
 import PrimaryHeading from '../../components/PrimaryHeading.vue';
 import AppLayout2 from '../../Layouts/AppLayout2.vue';
-
+import PrimaryButton from '../../components/PrimaryButton.vue';
 
 export default {
   components: {
     AppLayout2,
     PrimaryHeading,
-    Link
+    Link,
+    PrimaryButton
   },
   data() {
     return {
-      password: "1234",
       showPassword: false
     }
   },

@@ -1,6 +1,9 @@
 * {
   font-family: "Roboto", sans-serif;
   text-decoration: none !important;
+  
+}
+body{
   background-color: #E8F7FF;
 }
 
@@ -105,4 +108,36 @@
 
 .input-field:focus {
   background-color: white !important;
+}
+.input-field::placeholder {
+  color: #b9b8b8;
+  opacity: 1;
+}
+.side-wrapper{
+  background-color: #427378;
+  height: 100vh;
+}
+.name{
+  font-size: 20px;
+  font-weight: 600;
+
+}
+.logout-btn-sidenav{
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgb(0, 0, 0);
+}
+.logout-btn-sidenav:hover{
+  color: white !important;
+  border-color: #fff;
+}
+.email{
+  font-size: 13px;
+}
+.menu-wrapper .active {
+  background-color: #67888b !important;  
+  
+}
+.menu:hover{
+  background-color: #67888b;
 }
