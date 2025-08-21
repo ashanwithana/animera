@@ -183,3 +183,10 @@ body {
 .search-bar::placeholder {
   color: #938d9e !important;
 }
+.pet-table{
+  border-color: rgb(206, 206, 206);
+  
+}
+.custom-color{
+background-color: #E8ECEC !important;
+}

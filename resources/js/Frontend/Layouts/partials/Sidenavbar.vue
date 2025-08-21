@@ -4,7 +4,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="avatar rounded-circle border-3 border">
-                        <img src="images/avatar.png" class="w-100" alt="">
+                        <img src="/images/avatar.png" class="w-100" alt="">
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
             </Link>
             <Link :href="route('pets')">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['pets']),
+                active: addActiveClass(['pets','addpet']),
             }">
                 <Link class="text-white menu-link" :href="route('pets')"><i class="fa-solid fa-paw pe-2"></i>Pets</Link>
             </div>
@@ -45,18 +45,18 @@
                 <Link class="text-white menu-link" :href="route('users')"><i class="fa-solid fa-users pe-2"></i>Users</Link>
             </div>
             </Link>
-            <Link :href="route('users')">
+            <Link :href="route('records')">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['users']),
+                active: addActiveClass(['records']),
             }">
-                <Link class="text-white menu-link" :href="route('users')"><i class="fa-solid fa-sheet-plastic pe-2"></i>Pet Records</Link>
+                <Link class="text-white menu-link" :href="route('records')"><i class="fa-solid fa-sheet-plastic pe-2"></i>Pet Records</Link>
             </div>
             </Link>
-            <Link :href="route('users')">
+            <Link :href="route('crossing')">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['users']),
+                active: addActiveClass(['crossing']),
             }">
-                <Link class="text-white menu-link" :href="route('users')"><i class="fa-solid fa-venus-mars pe-2"></i>Pet Crossing</Link>
+                <Link class="text-white menu-link" :href="route('crossing')"><i class="fa-solid fa-venus-mars pe-2"></i>Pet Crossing</Link>
             </div>
             </Link>
             <div class="menu py-2 px-5 my-2">

@@ -8,7 +8,7 @@
       <div class="row mx-0" style="justify-content:space-between">
         <div class="col-md-2">
           <div class="">
-            <Link class="btn add-btn text-white">
+            <Link class="btn add-btn text-white" :href="route('addpet')">
             Add New Pet <i class="fa-solid fa-plus ps-3"></i>
             </Link>
           </div>
@@ -19,32 +19,37 @@
       </div>
     </div>
     <div class="data-table-wrapper mx-4 pt-3">
-      <div class="scroll" style="height: 400px; overflow:auto; width:1200px; ">
+      <div class="scroll" style="height: 400px; overflow:auto; width:100%; ">
 
 
         <table class="table text-center table-bordered pet-table table-responsive">
           <thead>
             <tr class="sticky-top">
-              <th scope="col" style="min-width: 100px;">Code</th>
-              <th scope="col" style="min-width: 100px;">Pet Name</th>
-              <th scope="col" style="min-width: 100px;">Type</th>
-              <th scope="col" style="min-width: 100px;">Handle</th>
-              <th scope="col" style="min-width: 100px;">Handle</th>
-              <th scope="col" style="min-width: 100px;">Handle</th>
-              <th scope="col" style="min-width: 100px;">Handle</th>
+              <th class=" custom-color" scope="col" style="min-width: 100px;">Code</th>
+              <th class=" custom-color" scope="col" style="min-width: 100px;">Pet Name</th>
+              <th class=" custom-color" scope="col" style="min-width: 100px;">Type</th>
+              <th class=" custom-color" scope="col" style="min-width: 100px;">Breed</th>
+              <th class=" custom-color" scope="col" style="min-width: 100px;">DOB</th>
+              <th class=" custom-color" scope="col" style="min-width: 100px;">Pet Owner</th>
+              <th class=" custom-color" scope="col" style="min-width: 100px;">Actions</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td scope="row">1asdasdas</td>
-              <td>Maasdsdsdsdsdsdsdsdsdrk</td>
-              <td>Ottsdfdddddddddddddo</td>
-              <td>@masddddddasdddddddo</td>
-              <td>@msaddddddddddo</td>
-              <td>@mdsaaaaaaado</td>
-              <td>@masddddddddo</td>
+            <tr v-for="pet in pets" :key="pet.code">
+              <td scope="row" class="py-3 custom-color">{{pet.code}}</td>
+              <td class="py-3 custom-color">{{pet.petname}}</td>
+              <td class="py-3 custom-color">{{pet.type}}</td>
+              <td class="py-3 custom-color">{{pet.breed}}</td>
+              <td class="py-3 custom-color">{{ pet.dob }}</td>
+              <td class="py-3 custom-color">{{ pet.petowner }}</td>
+              <td class="py-3 custom-color">
+                <div>
+                  <Link><i class="fa-solid fa-pen text-black mx-2"></i></Link>
+                  <Link><i class="fa-solid fa-trash-can text-black mx-2"></i></Link>
+                </div>
+              </td>
             </tr>
-            <tr>
+            <tr v-if="data == 0">
               <td colspan="7" class="text-muted">No records found</td>
               
             </tr>
@@ -67,6 +72,14 @@ export default {
     Dashboard,
     Link,
     SearchBar
+  },
+  props:{
+    pets:Object
+  },
+  data(){
+    return{
+      data:1
+    }
   }
 }
 </script>

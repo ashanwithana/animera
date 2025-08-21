@@ -2,7 +2,7 @@
   <nav class="navbar position-fixed w-100" style="background-color: transparent;">
     <div class="container-fluid nav-container">
       <Link :href="route('index')" class="navbar-brand">
-        <img src="images/animera-logo.png" alt="animera-logo" width="90">
+        <img src="/images/animera-logo.png" alt="animera-logo" width="90">
       </Link>
     </div>
   </nav>
