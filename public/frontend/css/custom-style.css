@@ -1,9 +1,10 @@
 * {
   font-family: "Roboto", sans-serif;
   text-decoration: none !important;
-  
+
 }
-body{
+
+body {
   background-color: #E8F7FF;
 }
 
@@ -109,35 +110,76 @@ body{
 .input-field:focus {
   background-color: white !important;
 }
+
 .input-field::placeholder {
   color: #b9b8b8;
   opacity: 1;
 }
-.side-wrapper{
+
+.side-wrapper {
   background-color: #427378;
   height: 100vh;
 }
-.name{
+
+.name {
   font-size: 20px;
   font-weight: 600;
 
 }
-.logout-btn-sidenav{
+
+.logout-btn-sidenav {
   font-size: 12px;
   transition: all 0.3s ease-in-out;
   border: 1px solid rgb(0, 0, 0);
 }
-.logout-btn-sidenav:hover{
+
+.logout-btn-sidenav:hover {
   color: white !important;
   border-color: #fff;
 }
-.email{
+
+.email {
   font-size: 13px;
+  color: #bdcfd1;
 }
+
 .menu-wrapper .active {
-  background-color: #67888b !important;  
-  
+  background-color: #67888b !important;
+
 }
-.menu:hover{
+
+.menu:hover {
   background-color: #67888b;
+}
+
+.table-heading {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.add-btn {
+  background-color: #427378 !important;
+  font-size: 12px;
+}
+
+.search-icon {
+  background-color: #B5EBF7 !important;
+  color: #938d9e !important;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.filter-icon {
+  background-color: #B5EBF7 !important;
+  color: #938d9e !important;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+.search-bar {
+  background-color: #B5EBF7 !important;
+}
+
+.search-bar::placeholder {
+  color: #938d9e !important;
 }

@@ -28,6 +28,8 @@ use Inertia\Inertia;
   Route::get('/staff', [PageController::class, 'staff'])->name('staff');
   Route::get('/pets', [PageController::class, 'pets'])->name('pets');
   Route::get('/dashboard', [PageController::class, 'animera'])->name('animera');
+  Route::get('/vaccines', [PageController::class, 'vaccines'])->name('vaccines');
+  Route::get('/users', [PageController::class, 'users'])->name('users');
   // Route::get('/auction/{model}/{slug}', [PageController::class, 'auction'])->name('auction');
   // Route::get('/live-auction', [PageController::class, 'Live_auction'])->name('live.auction');
   // Route::get('/service', [PageController::class, 'service'])->name('service');
