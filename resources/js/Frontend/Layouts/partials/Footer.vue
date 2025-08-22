@@ -1,6 +1,8 @@
 
 <template>
-  <h1>footer</h1>
+  <div>
+    <p class="text-center copyright-text position-fixed">@animera2025</p>
+  </div>
 </template>
 
 <script>

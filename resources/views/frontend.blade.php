@@ -3,7 +3,7 @@
 @php
 $settings = [
 'app_name' => App\Models\Settings::where(['key' => 'app_name'])->first()->value,
-'name' => 'E-market.com',
+'name' => 'Animera.com',
 'app_description' => App\Models\Settings::where(['key' => 'app_description'])->first()->value,
 'app_keywords' => '',
 'app_author' => '',
@@ -26,15 +26,17 @@ $settings = [
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" /> -->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Enriqueta:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="{{ asset('backend/assets/fonts/boxicons.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/fonts/fontawesome.css') }}" />
     <link rel="stylesheet" href="{{ asset('backend/assets/fonts/flag-icons.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="{{asset('frontend/css/icons.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
@@ -102,7 +104,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
 
 <body class="" id="body">
     @inertia
-  
+
 
 
     <script src="

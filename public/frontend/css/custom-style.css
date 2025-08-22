@@ -1,65 +1,192 @@
-*{
-  font-family: "Poppins", sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
   text-decoration: none !important;
+
 }
-/* Herosection */
-/* Category slider */
-.custom-image-size{
-  height: 165px !important;
-  width: 218px !important;
+
+body {
+  background-color: #E8F7FF;
 }
-/* card hover styles */
-.img-2{
-  opacity: 0;
-  transition: 0.5s;
-  top: 0;
+
+.secondary-font {
+  font-family: "Enriqueta", serif !important;
 }
-.hover-styles:hover .img-2{
-  opacity: 1;
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif !important;
 }
-.card-buttons{
-  right: 0;
-  top: 0;
+
+.welcome-text {
+  font-size: 64px !important;
+  font-weight: 700 !important;
 }
-.hover-img{
-  transition: 0.5s;
+
+.welcome-sub-text {
+  font-size: 30px;
+  font-weight: 400 !important;
+  color: #165757;
 }
-.hover-img:hover{
-  transform: scale(1.1);
+
+.qr-btn {
+  background-color: #96B2B5 !important;
+  transition: all 0.3s ease-in-out;
 }
-.card-buttons .btn:hover{
-  background-color: #424ef7;
-}
-.card-buttons .btn{
-  background-color: #ffffff;
-}
-.card-buttons .btn:hover i{
+
+.qr-btn:hover {
+  background-color: #96B2B5 !important;
   color: #fff;
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.3);
+
 }
-.add-cart-btn{
-  opacity: 0;
-  background-color: #424ef7;
-  color: #fff !important;
-  transition: 0.5s;
+
+.home-btn {
+  background-color: #008080 !important;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
-.add-cart-btn:hover{
-  background-color: #000000 !important;
+
+.home-btn:hover {
+  background-color: #008080 !important;
+  color: #fff;
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.3);
+
 }
-.hover-styles:hover .add-cart-btn{
+
+.copyright-text {
+  font-size: 14px;
+  color: #96B2B5;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  z-index: 1050;
+}
+
+.nav-container {
+  justify-content: flex-end !important;
+}
+
+.login-btn {
+  text-decoration: underline !important;
+}
+
+.login-welcome-text {
+  font-family: "Enriqueta", serif !important;
+  font-weight: 600;
+}
+
+.card-subtitle-login {
+  font-family: "Enriqueta", serif !important;
+  font-weight: 600;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.show-hide-btn {
+  right: 0 !important;
+  top: 6px !important;
+}
+
+.forgot-pwd {
+  font-size: 12px;
+  font-weight: 300;
+  color: #D885A3;
+}
+
+.input-field {
+  background-color: white !important;
+  border-radius: 0px;
+  border-color: white !important;
+}
+
+.input-field:active {
+  background-color: white !important;
+}
+
+.input-field:focus {
+  background-color: white !important;
+}
+
+.input-field::placeholder {
+  color: #b9b8b8;
   opacity: 1;
 }
-.cart-button{
-  bottom: 0;
-  right: 0;
+
+.side-wrapper {
+  background-color: #427378;
+  height: 100vh;
 }
-.sub-topic-border{
-  border-bottom: 3px solid blue;
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+
 }
-.custom-border-counter{
-  border:2px solid #ffc107;
-  border-radius: 24px;
+
+.logout-btn-sidenav {
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgb(0, 0, 0);
 }
-.counter{
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
+
+.logout-btn-sidenav:hover {
+  color: white !important;
+  border-color: #fff;
+}
+
+.email {
+  font-size: 13px;
+  color: #bdcfd1;
+}
+
+.menu-wrapper .active {
+  background-color: #67888b !important;
+
+}
+
+.menu:hover {
+  background-color: #67888b;
+}
+
+.table-heading {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.add-btn {
+  background-color: #427378 !important;
+  font-size: 12px;
+}
+
+.search-icon {
+  background-color: #B5EBF7 !important;
+  color: #938d9e !important;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.filter-icon {
+  background-color: #B5EBF7 !important;
+  color: #938d9e !important;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+.search-bar {
+  background-color: #B5EBF7 !important;
+}
+
+.search-bar::placeholder {
+  color: #938d9e !important;
+}
+.pet-table{
+  border-color: rgb(206, 206, 206);
+  
+}
+.custom-color{
+background-color: #E8ECEC !important;
 }
