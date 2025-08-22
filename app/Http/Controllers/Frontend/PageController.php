@@ -22,6 +22,34 @@ class PageController extends Controller
         // dd($users->all());
         return Inertia::render('Login/index');
     }
+    public function loginuser(Request $request)
+    {
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+        if ($request->username === 'amith' && $request->password === 'amith@123') {
+            $request->session()->put('user', 'amith');
+            return redirect()->route('index');
+        } elseif ($request->username === 'jagath' && $request->password === 'jagath@90') {
+            $request->session()->put('user', 'jagath');
+            return redirect()->route('index');
+        }elseif ($request->username === 'sanudi99' && $request->password === 'Taffy@S5') {
+            $request->session()->put('user', 'sanudi');
+            return redirect()->route('index');
+        }else {
+            return redirect()->back()
+                ->withInput()
+                ->withErrors([
+                    'username' => 'These credentials do not match our records.',
+                ]);
+        }
+    }
+     public function logout(Request $request)
+    {
+        $request->session()->forget('user');
+        return redirect()->route('login');
+    }
     public function staff()
     {
 
@@ -142,7 +170,7 @@ class PageController extends Controller
 
             ],
         ];
-        return Inertia::render('Users/index',['staff' => $staff]);
+        return Inertia::render('Users/index', ['staff' => $staff]);
     }
     public function records()
     {
@@ -158,5 +186,20 @@ class PageController extends Controller
     {
 
         return Inertia::render('Pets/add');
+    }
+    public function adduser()
+    {
+
+        return Inertia::render('Users/add');
+    }
+    public function addvaccine()
+    {
+
+        return Inertia::render('Vaccines/add');
+    }
+    public function mypets()
+    {
+
+        return Inertia::render('MyPets/index');
     }
 }

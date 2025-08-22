@@ -8,7 +8,7 @@
       <div class="row mx-0" style="justify-content:space-between">
         <div class="col-md-2">
           <div class="">
-            <Link class="btn add-btn text-white">
+            <Link class="btn add-btn text-white" :href="route('addvaccine')">
             Add New Stock <i class="fa-solid fa-plus ps-3"></i>
             </Link>
           </div>
