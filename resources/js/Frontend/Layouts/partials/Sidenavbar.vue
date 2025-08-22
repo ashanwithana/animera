@@ -1,5 +1,5 @@
 <template>
-    <div class="side-wrapper">
+    <div class="side-wrapper position-fixed">
         <div class="user-wrapper pt-5">
             <div class="row justify-content-center">
                 <div class="col-md-5">
@@ -18,7 +18,7 @@
                     class="fa-solid fa-arrow-right-from-bracket"></i></Link> -->
                 <p class="email" type="button" v-if="$page.props.user === 'amith'">amith@gmail.com</p>
                 <p class="email" type="button" v-if="$page.props.user === 'jagath'">drjagath@gmail.com</p>
-                <p class="email" type="button" v-if="$page.props.user === 'sanudi'">sanudisarithma199@gmail.com</p>
+                <p class="email" type="button" v-if="$page.props.user === 'sanudi'">sanudisarithma1999@gmail.com</p>
             </div>
         </div>
         <div class="menu-wrapper pt-4">
@@ -35,12 +35,12 @@
                 active: addActiveClass(['mypets']),
             }">
                 <Link class="text-white menu-link" :href="route('mypets')"><i
-                    class="fa-solid fa-chart-simple pe-2"></i>My Pets</Link>
+                    class="fa-solid fa-dog pe-2"></i>My Pets</Link>
             </div>
             </Link>
             <Link :href="route('pets')" v-if="$page.props.user == 'amith' || $page.props.user == 'jagath'">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['pets', 'addpet']),
+                active: addActiveClass(['pets', 'addpet','details']),
             }">
                 <Link class="text-white menu-link" :href="route('pets')"><i class="fa-solid fa-paw pe-2"></i>Pets</Link>
             </div>
@@ -63,15 +63,23 @@
             </Link>
             <Link :href="route('records')" v-if="$page.props.user == 'sanudi'">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['records']),
+                active: addActiveClass(['records','details']),
             }">
                 <Link class="text-white menu-link" :href="route('records')"><i
                     class="fa-solid fa-sheet-plastic pe-2"></i>Pet Records</Link>
             </div>
             </Link>
+            <Link v-if="$page.props.user == 'jagath'">
+            <div class="menu py-2 px-5 my-2" v-bind:class="{
+                active: addActiveClass(['treatments']),
+            }">
+                <Link class="text-white menu-link"><i
+                    class="fa-solid fa-briefcase-medical pe-2"></i>Today's Treatments</Link>
+            </div>
+            </Link>
             <Link :href="route('crossing')" v-if="$page.props.user == 'sanudi'">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['crossing']),
+                active: addActiveClass(['crossing','view','owner']),
             }">
                 <Link class="text-white menu-link" :href="route('crossing')"><i
                     class="fa-solid fa-venus-mars pe-2"></i>Pet Crossing</Link>

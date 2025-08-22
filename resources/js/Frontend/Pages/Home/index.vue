@@ -2,7 +2,6 @@
     <AppLayout>
     <div class="container-fluid">
         <Welcome />
-        {{ $page.props.user }}
     </div>
     </AppLayout>
 </template>

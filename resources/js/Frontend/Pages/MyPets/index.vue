@@ -11,22 +11,22 @@
             </div>
             <div class="row mx-0 pt-4" style="justify-content: space-evenly;">
                 <div class="col-md-3">
-                    <div>
+                    <Link :href="route('details')">
                         <div class="img-pet-wrapper">
                             <img src="/images/taffy.png" class="w-100" alt="">
                         </div>
                         <p class="mypet-name text-center mb-0 pt-3">Taffy</p>
                         <p class="mypet-breed text-center">Labrado Dog</p>
-                    </div>
+                    </Link>
                 </div>
                 <div class="col-md-3">
-                    <div>
+                    <Link>
                         <div class="img-pet-wrapper">
                             <img src="/images/belly.png" class="w-100" alt="">
                         </div>
                         <p class="mypet-name text-center mb-0 pt-3">Belly</p>
                         <p class="mypet-breed text-center">Persian Cat</p>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -34,10 +34,12 @@
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue3';
 import Dashboard from '../../Layouts/Dashboard.vue';
 export default {
     components: {
-        Dashboard
+        Dashboard,
+        Link
     }
 }
 </script>

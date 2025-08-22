@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="col-md-9">
-            <input :type="type" :placeholder="placeholder" class="form-control w-100 input-data rounded-0 shadow">
+            <input :type="type" :placeholder="placeholder" :disabled="disable" class="form-control w-100 input-data rounded-0 shadow">
         </div>
     </div>
 </template>
@@ -27,6 +27,11 @@ export default {
          placeholder: {
             type: String,
             required: false
+        },
+         disable: {
+            type: [Boolean, String],
+            required: false,
+            default:false
         }
     }
 }

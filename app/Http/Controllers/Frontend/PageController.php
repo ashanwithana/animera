@@ -202,4 +202,19 @@ class PageController extends Controller
 
         return Inertia::render('MyPets/index');
     }
+    public function details()
+    {
+
+        return Inertia::render('Records/details');
+    }
+    public function view()
+    {
+
+        return Inertia::render('Crossing/view');
+    }
+    public function owner()
+    {
+
+        return Inertia::render('Crossing/details');
+    }
 }

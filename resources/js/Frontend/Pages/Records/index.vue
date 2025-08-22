@@ -14,7 +14,7 @@
                         <div class="img-pet-wrapper position-relative">
                             <img src="/images/taffy.png" class="w-100" alt="">
                             <div class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center top-0 show-records rounded rounded-3">
-                              <Link class="bg-secondary px-3 py-2 text-white rounded">Show Records</Link>
+                              <Link :href="route('details')" class="bg-secondary px-3 py-2 text-white rounded">Show Records</Link>
                             </div>
                         </div>
                         <p class="mypet-name text-center mb-0 pt-3">Taffy</p>
