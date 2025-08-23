@@ -35,6 +35,16 @@ body {
   background-color: #96B2B5 !important;
   transition: all 0.3s ease-in-out;
 }
+.add-treatment{
+  background-color: #427378 !important;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+.add-treatment:hover{
+  background-color: #96B2B5 !important;
+  transition: all 0.3s ease-in-out;
+  color: black;
+}
 
 .qr-btn:hover {
   background-color: #96B2B5 !important;

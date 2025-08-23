@@ -2,7 +2,8 @@
     <Dashboard>
         <div class="topic-wrapper mt-5 pt-4 ps-5 d-flex align-items-center" style="justify-content: space-between;">
             <p class="table-heading mt-4">Pet Crossing</p>
-            <p class="mb-0 pe-5"><span class="fw-semibold pe-3">Date</span> <span>05/07/2025</span></p>
+            <p class="mb-0 pe-5"><span class="fw-semibold pe-2">Date:</span> <span>{{ $page.props.current_date
+                }}</span></p>
         </div>
         <div class="">
             <div class="row mx-0 px-5">

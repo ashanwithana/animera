@@ -1,20 +1,19 @@
 <template>
-    <Dashboard>
+    <QRLayout>
         <div class="topic-wrapper mt-2 pt-3 ps-5">
-            <p class="table-heading mt-4">Pet Profile</p>
+            <p class="table-heading mt-4">Pet Vaccines</p>
         </div>
-        <div class="row mx-0 px-5 align-items-center">
+        <div class="row mx-0 px-5">
 
             <div class="col-md-3">
-                <div class="pet-pic-wrapper position-relative">
+                <div class="pet-pic-wrapper position-relative pt-5">
                     <img src="/images/dog.png" class="w-100 object-fit-cover" alt="">
                 </div>
             </div>
             <div class="col-9">
                 <div class="add-heading pt-3 pb-3 d-flex align-items-center" style="justify-content: space-between;">
-                    <p class="mb-0 pet-add-topic"></p>
-                    <p class="mb-0"><span class="fw-semibold pe-2">Date:</span> <span>{{ $page.props.current_date
-                }}</span></p>
+                    <p class="mb-0 pet-add-topic">Vaccines the pet received....</p>
+                    <p class="mb-0"><span class="fw-semibold pe-2">Date:</span> <span>{{ $page.props.current_date }}</span></p>
                 </div>
                 <div class="scroll">
 
@@ -23,7 +22,6 @@
                         <thead>
                             <tr class="sticky-top">
                                 <th class=" custom-color" scope="col" style="min-width: 80px;">Date</th>
-                                <th class=" custom-color" scope="col" style="min-width: 100px;">Reason</th>
                                 <th class=" custom-color" scope="col" style="min-width: 100px;">Vaccine Name</th>
                                 <th class=" custom-color" scope="col" style="min-width: 100px;">Action</th>
                             </tr>
@@ -31,8 +29,7 @@
                         <tbody>
                             <tr>
                                 <td scope="row" class="py-3 custom-color">01/08/2024</td>
-                                <td class="py-3 custom-color">Vaccinations</td>
-                                <td class="py-3 custom-color">Parvovirus Vaccine</td>
+                                <td class="py-3 custom-color">Rabies Vaccine</td>
                                 <td class="py-3 custom-color">
                                     <div>
                                         <Link><i class="fa-solid fa-pen text-black mx-2"></i></Link>
@@ -41,8 +38,7 @@
                             </tr>
                             <tr>
                                 <td scope="row" class="py-3 custom-color">01/02/2025</td>
-                                <td class="py-3 custom-color">Routine health check-up</td>
-                                <td class="py-3 custom-color">Feline Panleukopenia Vaccine</td>
+                                <td class="py-3 custom-color">Parvovirus Vaccine</td>
                                 <td class="py-3 custom-color">
                                     <div>
                                         <Link><i class="fa-solid fa-pen text-black mx-2"></i></Link>
@@ -84,13 +80,13 @@
                     <InputFeild label="Password" type="text" placeholder="Taffy@S5" /> -->
                 </div>
                 <div class="row mx-0 justify-content-end  mt-5">
-                    <div class="col-md-12">
-                        <p class="dm-sans"><i>Your pet’s records, organized and ready whenever you need them...........</i></p>
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-md-12 text-end">
 
-                        <Link :href="route($page.props.user === 'jagath' ? 'pets' : 'records')">
+                        <Link :href="route('history')">
                         <PrimaryButton class="qr-btn cancle-btn py-2 px-4 fw-semibold mx-2" label="Cancle" />
+                        </Link>
+                        <Link>
+                        <PrimaryButton class="add-treatment py-2 px-4 fw-semibold mx-2 text-white" label="Add Treatment" :disabled="$page.props.user === 'amith'" />
                         </Link>
 
                     </div>
@@ -98,10 +94,12 @@
             </div>
 
         </div>
-    </Dashboard>
+    </QRLayout>
+
 </template>
 
 <script>
+import QRLayout from '../../Layouts/QRLayout.vue';
 import { Link } from '@inertiajs/inertia-vue3';
 import InputFeild from '../../components/InputFeild.vue';
 import PrimaryButton from '../../components/PrimaryButton.vue';
@@ -109,10 +107,12 @@ import Dashboard from '../../Layouts/Dashboard.vue';
 
 export default {
     components: {
+        QRLayout,
         Dashboard,
         InputFeild,
         PrimaryButton,
         Link
+    
     }
 }
 </script>

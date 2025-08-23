@@ -22,6 +22,12 @@
             </div>
         </div>
         <div class="menu-wrapper pt-4">
+            <Link :href="route('index')" v-if="$page.props.user == 'amith' || $page.props.user == 'jagath'">
+            <div class="menu py-2 px-5 my-2" >
+                <Link class="text-white menu-link" :href="route('index')"><i
+                    class="fa-solid fa-home pe-2"></i>Home</Link>
+            </div>
+            </Link>
             <Link :href="route('animera')">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
                 active: addActiveClass(['animera']),
@@ -45,7 +51,7 @@
                 <Link class="text-white menu-link" :href="route('pets')"><i class="fa-solid fa-paw pe-2"></i>Pets</Link>
             </div>
             </Link>
-            <Link :href="route('vaccines')">
+            <Link :href="route('vaccines')" v-if="$page.props.user == 'jagath' || $page.props.user == 'amith'">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
                 active: addActiveClass(['vaccines', 'addvaccine']),
             }">

@@ -217,4 +217,19 @@ class PageController extends Controller
 
         return Inertia::render('Crossing/details');
     }
+    public function history()
+    {
+
+        return Inertia::render('History/index');
+    }
+    public function pvaccine()
+    {
+
+        return Inertia::render('Pvaccines/index');
+    }
+    public function treatments()
+    {
+
+        return Inertia::render('Treatments/index');
+    }
 }

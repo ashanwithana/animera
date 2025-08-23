@@ -1,5 +1,5 @@
 <template>
-    <button class="btn border-0">{{ label }}</button>
+    <button class="btn border-0" :disabled="disabled">{{ label }}</button>
 </template>
 
 <script>
@@ -8,9 +8,18 @@ export default {
         label: {
             type: String,
             required: true
+        },
+        disabled:{
+            type: [Boolean, String],
+            required: false,
+            default:false
         }
     }
 }
 </script>
 
-<style></style>
+<style>
+.btn:disabled{
+    color: white !important;
+}
+</style>

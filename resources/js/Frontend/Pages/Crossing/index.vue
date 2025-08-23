@@ -9,7 +9,8 @@
 
         </div>
         <div class="col-md-6 text-end">
-          <p class="mb-0"><span class="fw-semibold pe-3">Date</span> <span>05/07/2025</span></p>
+          <p class="mb-0"><span class="fw-semibold pe-2">Date:</span> <span>{{ $page.props.current_date
+                }}</span></p>
 
         </div>
       </div>

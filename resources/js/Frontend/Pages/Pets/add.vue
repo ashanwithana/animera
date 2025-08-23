@@ -69,7 +69,8 @@
       <div class="col-md-5 ms-5">
         <div class="add-heading pt-3 pb-3 d-flex align-items-center" style="justify-content: space-between;">
           <p class="mb-0 pet-add-topic">Pet Owner</p>
-          <p class="mb-0"><span class="fw-semibold pe-3">Date</span> <span>05/07/2025</span></p>
+          <p class="mb-0"><span class="fw-semibold pe-2">Date:</span> <span>{{ $page.props.current_date
+                }}</span></p>
         </div>
         <div class="input-data-wrapper">
           <InputFeild label="Owner Code" type="text" placeholder="Q001" />

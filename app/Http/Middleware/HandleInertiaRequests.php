@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Http\Controllers\PropertyController;
 use App\Models\Branch;
 use App\Models\Property;
+use Carbon\Carbon;
 use Closure;
 // use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
@@ -64,6 +65,7 @@ class HandleInertiaRequests extends Middleware
         // ]);
          return array_merge(parent::share($request), [
             'user' => Session::get('user'), // or Auth::guard('customer')->user()
+            'current_date' => Carbon::now()->format('d M Y'),
         ]);
 
     }

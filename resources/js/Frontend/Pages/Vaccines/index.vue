@@ -7,7 +7,7 @@
     <div class="btn-section px-3">
       <div class="row mx-0" style="justify-content:space-between">
         <div class="col-md-2">
-          <div class="">
+          <div class="" v-if="$page.props.user == 'jagath' || $page.props.user == 'amith'">
             <Link class="btn add-btn text-white" :href="route('addvaccine')">
             Add New Stock <i class="fa-solid fa-plus ps-3"></i>
             </Link>
@@ -30,7 +30,7 @@
               <th class=" custom-color" scope="col" style="min-width: 100px;">Available Qty.</th>
               <th class=" custom-color" scope="col" style="min-width: 100px;">Expiry Date</th>
 
-              <th class=" custom-color" scope="col" style="min-width: 100px;">Actions</th>
+              <th v-if="$page.props.user == 'jagath' || $page.props.user == 'amith'" class=" custom-color" scope="col" style="min-width: 100px;">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -39,7 +39,7 @@
               <td class="py-3 custom-color">{{ vaccine.vaccinename }}</td>
               <td class="py-3 custom-color">{{ vaccine.availability }}</td>
               <td class="py-3 custom-color">{{ vaccine.expiredate }}</td>
-              <td class="py-3 custom-color">
+              <td v-if="$page.props.user == 'jagath' || $page.props.user == 'amith'" class="py-3 custom-color">
                 <div>
                   <Link><i class="fa-solid fa-pen text-black mx-2"></i></Link>
                   <Link><i class="fa-solid fa-trash-can text-black mx-2"></i></Link>
