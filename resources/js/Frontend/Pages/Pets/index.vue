@@ -44,6 +44,7 @@
               <td class="py-3 custom-color">{{ pet.petowner }}</td>
               <td class="py-3 custom-color">
                 <div>
+                  <Link :href="route('details')" v-if="$page.props.user == 'jagath'"><i class="fa-solid fa-eye text-black mx-2"></i></Link>
                   <Link><i class="fa-solid fa-pen text-black mx-2"></i></Link>
                   <Link><i class="fa-solid fa-trash-can text-black mx-2"></i></Link>
                 </div>

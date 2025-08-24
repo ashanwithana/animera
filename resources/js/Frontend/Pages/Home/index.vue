@@ -17,10 +17,22 @@ export default {
         AppLayout,
         Welcome
     },
+    props:{
+        
+    },
+    
+    
     data() {
         return {
 
         }
+    },
+    mounted(){
+        axios.get('/api/user')
+      .then(res => {
+        this.user = res.data.user;
+        console.log(this.user);
+      });
     },
     methods: {
 

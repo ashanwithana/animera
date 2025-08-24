@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+Route::get('v1/api/user', function () {
+    return response()->json([
+        'user' => session('user')
+    ]);
+});
 Route::prefix('v1')->group(function() {
     Route::get('local-stock', [VehicleController::class, 'index']);
     Route::get('local-stock/{id}', [VehicleController::class, 'details']);

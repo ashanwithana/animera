@@ -5,12 +5,15 @@ namespace App\Http\Middleware;
 use App\Http\Controllers\PropertyController;
 use App\Models\Branch;
 use App\Models\Property;
+use Carbon\Carbon;
 use Closure;
+// use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Inertia\Middleware;
 use Laravel\Jetstream\Http\Middleware\ShareInertiaData;
+use Illuminate\Support\Facades\Session;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -51,15 +54,20 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
-        return array_merge(parent::share($request), [
-            'csrf_token' => csrf_token(),
-            'flash' => [
-                'error' => fn () => $request->session()->get('error')
-            ],
-            'permission' => Auth::check() ? auth()->user()->getUserPermisionByNameArray() : null,
-            'logged_customer' => Auth::guard('customer')->user(),// this get logged user
-            'recaptcha_site_key' => config('services.google_recaptcha.site_key'),
+        // return array_merge(parent::share($request), [
+        //     'csrf_token' => csrf_token(),
+        //     'flash' => [
+        //         'error' => fn () => $request->session()->get('error')
+        //     ],
+        //     'permission' => Auth::check() ? auth()->user()->getUserPermisionByNameArray() : null,
+        //     'logged_customer' => Auth::guard('customer')->user(),// this get logged user
+        //     'recaptcha_site_key' => config('services.google_recaptcha.site_key'),
+        // ]);
+         return array_merge(parent::share($request), [
+            'user' => Session::get('user'), // or Auth::guard('customer')->user()
+            'current_date' => Carbon::now()->format('d M Y'),
         ]);
+
     }
 
         /**

@@ -13,15 +13,19 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-9">
                         <div class="btn-grp text-center pt-3">
-                    <div class="btn-wrapper pb-4">
-                        <PrimaryButton class="qr-btn py-2 px-4 fw-semibold w-100" label="Generate QR Code" />
+                    <div class="btn-wrapper pb-4" v-if="$page.props.user == 'amith' || $page.props.user == 'jagath'">
+                        <Link :href="route('history')">
+                        <PrimaryButton class="qr-btn py-2 px-4 fw-semibold w-100" label="Scan QR Code" />
+                        </Link>
                     </div>
                     <div class="btn-wrapper pb-4">
+                        <Link :href="route('animera')">
                         <PrimaryButton class="home-btn py-2 px-4 fw-semibold w-100" label="Home" />
+                        </Link>
                     </div>
-                    <div class="btn-wrapper">
+                    <!-- <div class="btn-wrapper">
                         <Link class="login-btn" :href="route('login')">Login</Link>
-                    </div>
+                    </div> -->
                 </div>
                     </div>
                 </div>
