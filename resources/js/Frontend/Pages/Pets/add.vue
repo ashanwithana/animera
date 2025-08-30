@@ -77,8 +77,7 @@
           <InputFeild label="Owner Name" type="text" placeholder="Sanudi Pinnawala" />
           <InputFeild label="Contact No." type="text" placeholder="0715314148" />
           <InputFeild label="E-Mail" type="text" placeholder="sanudisarithma1999@gmail.com" />
-          <InputFeild label="Username" type="text" placeholder="sanudi99" />
-          <InputFeild label="Password" type="text" placeholder="Taffy@S5" />
+          
         </div>
        <div class="row mx-0 justify-content-center  mt-5">
         <div class="col-md-8">
