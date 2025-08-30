@@ -81,10 +81,17 @@
         </div>
        <div class="row mx-0 justify-content-center  mt-5">
         <div class="col-md-8">
-           <PrimaryButton class="qr-btn py-2 px-4 fw-semibold w-75" label="Generate QR Code" />
+           <PrimaryButton @click="generateQRCode()" class="qr-btn py-2 px-4 fw-semibold w-75" label="Generate QR Code" />
+           <div class="row pt-3" v-if="showQRcode">
+            <div class="col-md-8">
+              <div class="qr-code-wrapper">
+                <img src="/images/qrcode.png" class="w-100 h-100" alt="">
+              </div>
+            </div>
+           </div>
         </div>
        </div>
-       <div class="row mx-0 justify-content-end  mt-5">
+       <div class="row mx-0 justify-content-end  mt-5 pb-5">
         <div class="col-md-8">
           <Link :href="route('pets')">
            <PrimaryButton class="qr-btn cancle-btn py-2 px-4 fw-semibold mx-2" label="Cancle" />
@@ -103,12 +110,24 @@ import InputFeild from '../../components/InputFeild.vue';
 import PrimaryButton from '../../components/PrimaryButton.vue';
 import Dashboard from '../../Layouts/Dashboard.vue';
 
+
+
 export default {
   components: {
     Dashboard,
     InputFeild,
     PrimaryButton,
     Link
+  },
+  data(){
+    return {
+      showQRcode: false,
+    }
+  },
+  methods:{
+    generateQRCode(){
+      this.showQRcode = true;
+    }
   }
 }
 </script>

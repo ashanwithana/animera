@@ -82,7 +82,7 @@ export default {
         
       },
       onError: () => {
-        this.form.reset("password");
+        this.form.reset();
       },
     });
   },
