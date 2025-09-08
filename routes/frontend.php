@@ -26,7 +26,7 @@ use Inertia\Inertia;
 Route::get('/', [PageController::class, 'login'])->name('login');
 Route::get('/home', [HomeController::class, 'index'])->name('index');
   Route::post('/login', [PageController::class, 'loginuser'])->name('loginuser');
-  Route::get('/logot', [PageController::class, 'logout'])->name('logout');
+  Route::get('/logout', [PageController::class, 'logout'])->name('logout');
   Route::get('/staff', [PageController::class, 'staff'])->name('staff');
   Route::get('/pets', [PageController::class, 'pets'])->name('pets');
   Route::get('/pets/add', [PageController::class, 'addpet'])->name('addpet');

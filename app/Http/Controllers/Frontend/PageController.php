@@ -30,13 +30,13 @@ class PageController extends Controller
         ]);
         if ($request->username === 'amith' && $request->password === 'amith@123') {
             $request->session()->put('user', 'amith');
-            return redirect()->route('index');
+            return redirect()->route('animera');
         } elseif ($request->username === 'jagath' && $request->password === 'jagath@90') {
             $request->session()->put('user', 'jagath');
             return redirect()->route('index');
         }elseif ($request->username === 'sanudi99' && $request->password === 'Taffy@S5') {
             $request->session()->put('user', 'sanudi');
-            return redirect()->route('index');
+            return redirect()->route('animera');
         }else {
             return redirect()->back()
                 ->withInput()
