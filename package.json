@@ -25,6 +25,7 @@
         "vue-loader": "^17.0.0"
     },
     "dependencies": {
+        "@rollup/rollup-darwin-arm64": "^4.48.0",
         "@tinymce/tinymce-vue": "^6.0.1",
         "@unhead/vue": "^1.11.2",
         "alpinejs": "^3.12.0",
