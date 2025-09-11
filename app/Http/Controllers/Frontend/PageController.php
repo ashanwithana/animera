@@ -232,4 +232,9 @@ class PageController extends Controller
 
         return Inertia::render('Treatments/index');
     }
+    public function scan()
+    {
+
+        return Inertia::render('QR/index');
+    }
 }

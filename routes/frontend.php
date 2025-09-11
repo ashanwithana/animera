@@ -44,6 +44,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('index');
   Route::get('/pet-history', [PageController::class, 'history'])->name('history');
   Route::get('/past-vaccines', [PageController::class, 'pvaccine'])->name('pvaccine');
   Route::get('/treatments', [PageController::class, 'treatments'])->name('treatments');
+  Route::get('/qr-scan', [PageController::class, 'scan'])->name('scan');
   // Route::get('/auction/{model}/{slug}', [PageController::class, 'auction'])->name('auction');
   // Route::get('/live-auction', [PageController::class, 'Live_auction'])->name('live.auction');
   // Route::get('/service', [PageController::class, 'service'])->name('service');
