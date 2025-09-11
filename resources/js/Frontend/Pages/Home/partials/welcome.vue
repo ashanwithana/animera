@@ -14,7 +14,7 @@
                     <div class="col-md-4 col-9">
                         <div class="btn-grp text-center pt-3">
                     <div class="btn-wrapper pb-4" v-if="$page.props.user == 'amith' || $page.props.user == 'jagath'">
-                        <Link :href="route('history')">
+                        <Link :href="route('scan')">
                         <PrimaryButton class="qr-btn py-2 px-4 fw-semibold w-100" label="Scan QR Code" />
                         </Link>
                     </div>

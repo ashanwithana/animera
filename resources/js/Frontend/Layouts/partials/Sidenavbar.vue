@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="menu-wrapper pt-4">
-            <Link :href="route('index')" v-if="$page.props.user == 'amith' || $page.props.user == 'jagath'">
+            <Link :href="route('index')" v-if="$page.props.user == 'jagath'">
             <div class="menu py-2 px-5 my-2" >
                 <Link class="text-white menu-link" :href="route('index')"><i
                     class="fa-solid fa-home pe-2"></i>Home</Link>
@@ -75,14 +75,7 @@
                     class="fa-solid fa-sheet-plastic pe-2"></i>Pet Records</Link>
             </div>
             </Link>
-            <Link v-if="$page.props.user == 'jagath'">
-            <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['treatments']),
-            }">
-                <Link class="text-white menu-link"><i
-                    class="fa-solid fa-briefcase-medical pe-2"></i>Today's Treatments</Link>
-            </div>
-            </Link>
+           
             <Link :href="route('crossing')" v-if="$page.props.user == 'sanudi'">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
                 active: addActiveClass(['crossing','view','owner']),
