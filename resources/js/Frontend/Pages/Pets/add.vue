@@ -191,7 +191,7 @@ export default {
     },
     methods: {
         generateQRCode() {
-            this.qrCodeUrl = "/images/qrcode.png";
+            this.qrCodeUrl = "/images/qr-taffy.jpg";
             this.showQRcode = true;
         },
     },
