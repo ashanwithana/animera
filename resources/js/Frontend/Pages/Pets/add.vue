@@ -96,7 +96,9 @@
           <Link :href="route('pets')">
            <PrimaryButton class="qr-btn cancle-btn py-2 px-4 fw-semibold mx-2" label="Cancle" />
           </Link>
+          <Link  :href="route('pets')">
            <PrimaryButton class="qr-btn submit-btn py-2 px-4 fw-semibold mx-2" label="Submit" />
+          </Link>
         </div>
        </div>
       </div>
