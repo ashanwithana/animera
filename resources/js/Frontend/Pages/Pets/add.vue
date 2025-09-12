@@ -141,7 +141,7 @@
                                 <a
                                     v-if="qrCodeUrl"
                                     :href="qrCodeUrl"
-                                    download="qr-code.png"
+                                    download="qr-code-taffy.png"
                                     class="py-2 px-4 fw-semibold text-center text-decoration-underline"
                                     tag="a"
                                     

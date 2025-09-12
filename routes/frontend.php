@@ -24,8 +24,10 @@ use Inertia\Inertia;
 
 
 Route::get('/', [PageController::class, 'login'])->name('login');
+Route::post('/login', [PageController::class, 'loginuser'])->name('loginuser');
+
+Route::middleware(['session.check'])->group(function () {
 Route::get('/home', [HomeController::class, 'index'])->name('index');
-  Route::post('/login', [PageController::class, 'loginuser'])->name('loginuser');
   Route::get('/logout', [PageController::class, 'logout'])->name('logout');
   Route::get('/staff', [PageController::class, 'staff'])->name('staff');
   Route::get('/pets', [PageController::class, 'pets'])->name('pets');
@@ -66,5 +68,5 @@ Route::get('/home', [HomeController::class, 'index'])->name('index');
 
   // Route::post('/submit-inquiry', [InquiryController::class, 'submit'])->name('submit-inquiry');
 
-
+});
   
