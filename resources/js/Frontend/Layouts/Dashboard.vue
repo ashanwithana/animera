@@ -24,6 +24,10 @@ export default {
         Footer,
         Sidenavbar
 
+    },
+    mounted(){
+         const user = sessionStorage.getItem('user');
+ console.log(user);
     }
 }
 </script>
