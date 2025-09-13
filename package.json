@@ -31,7 +31,8 @@
         "bootstrap": "^5.3.3",
         "html5-qrcode": "^2.3.8",
         "jquery": "^3.7.1",
-        "sweetalert2": "^11.14.0",
+        "qrcode": "^1.5.4",
+        "sweetalert2": "^11.23.0",
         "swiper": "^11.1.14",
         "vue-recaptcha": "^3.0.0-alpha.6",
         "vuex": "^4.0.2"

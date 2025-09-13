@@ -66,6 +66,11 @@ class HandleInertiaRequests extends Middleware
          return array_merge(parent::share($request), [
             'user' => Session::get('user'), // or Auth::guard('customer')->user()
             'current_date' => Carbon::now()->format('d M Y'),
+            'pets' => function () use ($request) {
+
+            $petId = session('selected_pet_id'); // store ID in session or other logic
+            return $petId ? Pets::with('media')->find($petId) : null;
+        },
         ]);
 
     }

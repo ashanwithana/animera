@@ -96,7 +96,7 @@
                 <div class="row mx-0 justify-content-end  mt-5">
                     <div class="col-md-12 text-end">
 
-                        <Link :href="route('history')">
+                        <Link :href="route('pets.view', $page.props.pets.id)">
                         <PrimaryButton class="qr-btn cancle-btn py-2 px-4 fw-semibold mx-2" label="Cancle" />
                         </Link>
                         <Link>
@@ -128,6 +128,9 @@ export default {
         PrimaryButton,
         Link
 
+    },
+    props:{
+        pets:Object
     },
     data() {
         return {
