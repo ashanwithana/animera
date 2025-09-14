@@ -55,46 +55,46 @@ class PageController extends Controller
 
         return Inertia::render('Staff/index');
     }
-    public function pets()
-    {
-        $pets = [
-            [
-                'code' => 'P001',
-                'petname' => 'Taffy',
-                'type' => 'Dog',
-                'breed' => 'Labrador',
-                'dob' => '25/09/2023',
-                'petowner' => 'Sanudi Pinnawala',
-            ],
-            [
-                'code' => 'P002',
-                'petname' => 'Boxer',
-                'type' => 'Dog',
-                'breed' => 'German Shepherd',
-                'dob' => '05/12/2024',
-                'petowner' => 'Kaveen Tharana',
-            ],
-            [
-                'code' => 'P003',
-                'petname' => 'Lily',
-                'type' => 'Cat',
-                'breed' => 'Persian',
-                'dob' => '19/01/2025',
-                'petowner' => 'Sinali Sithahara',
-            ],
-            [
-                'code' => 'P004',
-                'petname' => 'Bella',
-                'type' => 'Cat',
-                'breed' => 'Ragdoll',
-                'dob' => '05/03/2024',
-                'petowner' => 'Nipuna Perera',
-            ],
-        ];
+    // public function pets()
+    // {
+    //     $pets = [
+    //         [
+    //             'code' => 'P001',
+    //             'petname' => 'Taffy',
+    //             'type' => 'Dog',
+    //             'breed' => 'Labrador',
+    //             'dob' => '25/09/2023',
+    //             'petowner' => 'Sanudi Pinnawala',
+    //         ],
+    //         [
+    //             'code' => 'P002',
+    //             'petname' => 'Boxer',
+    //             'type' => 'Dog',
+    //             'breed' => 'German Shepherd',
+    //             'dob' => '05/12/2024',
+    //             'petowner' => 'Kaveen Tharana',
+    //         ],
+    //         [
+    //             'code' => 'P003',
+    //             'petname' => 'Lily',
+    //             'type' => 'Cat',
+    //             'breed' => 'Persian',
+    //             'dob' => '19/01/2025',
+    //             'petowner' => 'Sinali Sithahara',
+    //         ],
+    //         [
+    //             'code' => 'P004',
+    //             'petname' => 'Bella',
+    //             'type' => 'Cat',
+    //             'breed' => 'Ragdoll',
+    //             'dob' => '05/03/2024',
+    //             'petowner' => 'Nipuna Perera',
+    //         ],
+    //     ];
 
 
-        return Inertia::render('Pets/index', ['pets' => $pets]);
-    }
+    //     return Inertia::render('Pets/index', ['pets' => $pets]);
+    // }
     public function animera()
     {
 
@@ -217,21 +217,21 @@ class PageController extends Controller
 
         return Inertia::render('Crossing/details');
     }
-    public function history()
-    {
+    // public function history()
+    // {
 
-        return Inertia::render('History/index');
-    }
-    public function pvaccine()
-    {
+    //     return Inertia::render('History/index');
+    // }
+    // public function pvaccine()
+    // {
 
-        return Inertia::render('Pvaccines/index');
-    }
-    public function treatments()
-    {
+    //     return Inertia::render('Pvaccines/index');
+    // }
+    // public function treatments()
+    // {
 
-        return Inertia::render('Treatments/index');
-    }
+    //     return Inertia::render('Treatments/index');
+    // }
     public function scan()
     {
 

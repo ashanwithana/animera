@@ -24,6 +24,9 @@ export default {
         Footer,
         Sidenavbar2
 
+    },
+    props:{
+        pets:Object
     }
 }
 </script>

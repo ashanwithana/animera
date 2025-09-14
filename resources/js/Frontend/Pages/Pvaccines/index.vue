@@ -7,7 +7,7 @@
 
             <div class="col-md-3">
                 <div class="pet-pic-wrapper position-relative pt-5">
-                    <img src="/images/dog.png" class="w-100 object-fit-cover" alt="">
+                    <img :src="pets.media[0].original_url" class="w-100 object-fit-cover" alt="">
                 </div>
             </div>
             <div class="col-9">
@@ -59,12 +59,12 @@
                     <p class="mb-0 pet-add-topic">Pet</p>
                 </div>
                 <div class="inpu-data-wrapper">
-                    <InputFeild label="Pet Name" type="text" placeholder="Taffy" disable="true" />
-                    <InputFeild label="Type" type="text" placeholder="Dog" disable="true" />
-                    <InputFeild label="Gender" type="text" placeholder="Male" disable="true" />
-                    <InputFeild label="Breed" type="text" placeholder="Labrado" disable="true" />
-                    <InputFeild label="DOB" type="text" placeholder="20/04/2020" disable="true" />
-                    <InputFeild label="Age" type="text" placeholder="2 Years" disable="true" />
+                    <InputFeild label="Pet Name" type="text" :placeholder="pets.pet_name" disable="true" />
+                    <InputFeild label="Type" type="text" :placeholder="pets.type" disable="true" />
+                    <InputFeild label="Gender" type="text" :placeholder="pets.gender" disable="true" />
+                    <InputFeild label="Breed" type="text" :placeholder="pets.breed" disable="true" />
+                    <InputFeild label="DOB" type="text" :placeholder="pets.dob" disable="true" />
+                    <InputFeild label="Age" type="text" :placeholder="pets.age" disable="true" />
                 </div>
             </div>
             <div class="col-md-5 ms-5">
@@ -73,16 +73,16 @@
                     <!-- <p class="mb-0"><span class="fw-semibold pe-3">Date</span> <span>05/07/2025</span></p> -->
                 </div>
                 <div class="input-data-wrapper">
-                    <InputFeild label="Owner Name" type="text" placeholder="Sanudi Pinnawala" disable="true" />
-                    <InputFeild label="Contact No." type="text" placeholder="0715314148" disable="true" />
-                    <InputFeild label="E-Mail" type="text" placeholder="sanudisarithma1999@gmail.com" disable="true" />
+                    <InputFeild label="Owner Name" type="text" :placeholder="pets.pet_owner" disable="true" />
+                    <InputFeild label="Contact No." type="text" :placeholder="pets.p_no" disable="true" />
+                    <InputFeild label="E-Mail" type="text" :placeholder="pets.email" disable="true" />
                     <!-- <InputFeild label="Username" type="text" placeholder="sanudi99" />
                     <InputFeild label="Password" type="text" placeholder="Taffy@S5" /> -->
                 </div>
                 <div class="row mx-0 justify-content-end  mt-5">
                     <div class="col-md-12 text-end">
 
-                        <Link :href="route('history')">
+                        <Link :href="route('pets.view', $page.props.pets.id)">
                         <PrimaryButton class="qr-btn cancle-btn py-2 px-4 fw-semibold mx-2" label="Cancle" />
                         </Link>
                         <Link>
@@ -113,6 +113,9 @@ export default {
         PrimaryButton,
         Link
     
+    },
+    props:{
+        pets:Object
     }
 }
 </script>

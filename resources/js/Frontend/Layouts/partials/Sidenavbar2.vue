@@ -22,27 +22,27 @@
             </div>
         </div>
         <div class="menu-wrapper pt-4">
-            <Link :href="route('history')">
+            <Link :href="route('pets.view', $page.props.pets.id)">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
-                active: addActiveClass(['history']),
+                active: addActiveClass(['pets.view']),
             }">
-                <Link class="text-white menu-link" :href="route('history')"><i
+                <Link class="text-white menu-link" :href="route('pets.view', $page.props.pets.id)"><i
                     class="fa-solid fa-dog pe-2"></i>Pet History</Link>
             </div>
             </Link>
-            <Link :href="route('pvaccine')">
+            <Link :href="route('pvaccine', $page.props.pets.id)">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
                 active: addActiveClass(['pvaccine']),
             }">
-                <Link class="text-white menu-link" :href="route('pvaccine')"><i
+                <Link class="text-white menu-link" :href="route('pvaccine', $page.props.pets.id)"><i
                     class="fa-solid fa-syringe pe-2"></i>Past Vaccines</Link>
             </div>
             </Link>
-            <Link :href="route('treatments')">
+            <Link :href="route('treatments', $page.props.pets.id)">
             <div class="menu py-2 px-5 my-2" v-bind:class="{
                 active: addActiveClass(['treatments']),
             }">
-                <Link class="text-white menu-link" :href="route('treatments')"><i class="fa-solid fa-briefcase-medical pe-2"></i>Treatments</Link>
+                <Link class="text-white menu-link" :href="route('treatments', $page.props.pets.id)"><i class="fa-solid fa-briefcase-medical pe-2"></i>Treatments</Link>
             </div>
             </Link>
             <Link :href="route('index')">
@@ -78,6 +78,9 @@ export default {
         return {
             currentRoute: "",
         }
+    },
+    props:{
+        pets:Object
     },
 
     methods: {
