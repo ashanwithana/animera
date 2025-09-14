@@ -7,7 +7,7 @@
 
             <div class="col-md-3">
                 <div class="pet-pic-wrapper position-relative pt-5">
-                    <img :src="pets.media[0].original_url" class="w-100 object-fit-cover" alt="">
+                    <img :src="pets.media[0].original_url" class="w-100 object-fit-cover h-100 pet-pic-wrapper" alt="">
                 </div>
             </div>
             <div class="col-9">
@@ -119,4 +119,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.pet-pic-wrapper{
+
+    border-radius:50% !important;
+    height:170px !important;
+    width:170px !important;
+}
+</style>
