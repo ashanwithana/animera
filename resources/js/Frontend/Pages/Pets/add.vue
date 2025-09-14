@@ -141,7 +141,7 @@
                                 <a
                                     v-if="qrCodeUrl"
                                     :href="qrCodeUrl"
-                                    download="qr-code.png"
+                                    download="qr-code-taffy.png"
                                     class="py-2 px-4 fw-semibold text-center text-decoration-underline"
                                     tag="a"
                                     
@@ -167,7 +167,100 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+        <div class="inpu-data-wrapper">
+          <InputFeild label="Pet Code" type="text" placeholder="P001" />
+          <InputFeild label="Pet Name" type="text" placeholder="Taffy" />
+          <div class="row mx-0 align-items-center pb-2">
+            <div class="col-md-3 ps-0">
+              <div class="input-heading">
+                <p class="mb-0 input-heading-text">
+                  Type
+                </p>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <select class="form-select form-control input-data rounded-0" aria-label="Default select example">
+                <option selected>Dog</option>
+                <option value="1">Cat</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mx-0 align-items-center pb-2">
+            <div class="col-md-3 ps-0">
+              <div class="input-heading">
+                <p class="mb-0 input-heading-text">
+                  Gender
+                </p>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <select class="form-select form-control input-data rounded-0" aria-label="Default select example">
+                <option selected>Male</option>
+                <option value="1">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mx-0 align-items-center pb-2">
+            <div class="col-md-3 ps-0">
+              <div class="input-heading">
+                <p class="mb-0 input-heading-text">
+                  Breed
+                </p>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <select class="form-select form-control input-data rounded-0" aria-label="Default select example">
+                <option selected>Labrado</option>
+                <option value="1">German Shepherd</option>
+              </select>
+            </div>
+          </div>
+          <InputFeild label="DOB" type="date" />
+          <InputFeild label="Age" type="text" placeholder="2 Years" />
+        </div>
+      </div>
+      <div class="col-md-5 ms-5">
+        <div class="add-heading pt-3 pb-3 d-flex align-items-center" style="justify-content: space-between;">
+          <p class="mb-0 pet-add-topic">Pet Owner</p>
+          <p class="mb-0"><span class="fw-semibold pe-2">Date:</span> <span>{{ $page.props.current_date
+                }}</span></p>
+        </div>
+        <div class="input-data-wrapper">
+          <InputFeild label="Owner Code" type="text" placeholder="Q001" />
+          <InputFeild label="Owner Name" type="text" placeholder="Sanudi Pinnawala" />
+          <InputFeild label="Contact No." type="text" placeholder="0715314148" />
+          <InputFeild label="E-Mail" type="text" placeholder="sanudisarithma1999@gmail.com" />
+          
+        </div>
+       <div class="row mx-0 justify-content-center  mt-5">
+        <div class="col-md-8">
+           <PrimaryButton @click="generateQRCode()" class="qr-btn py-2 px-4 fw-semibold w-75" label="Generate QR Code" />
+           <div class="row pt-3" v-if="showQRcode">
+            <div class="col-md-8">
+              <div class="qr-code-wrapper">
+                <img src="/images/qrcode.png" class="w-100 h-100" alt="">
+              </div>
+            </div>
+           </div>
+        </div>
+       </div>
+       <div class="row mx-0 justify-content-end  mt-5 pb-5">
+        <div class="col-md-8">
+          <Link :href="route('pets')">
+           <PrimaryButton class="qr-btn cancle-btn py-2 px-4 fw-semibold mx-2" label="Cancle" />
+          </Link>
+          <Link  :href="route('pets')">
+           <PrimaryButton class="qr-btn submit-btn py-2 px-4 fw-semibold mx-2" label="Submit" />
+          </Link>
+        </div>
+       </div>
+      </div>
+    </div>
+  </Dashboard>
+=======
     </Dashboard>
+>>>>>>> 113dddac8d56652687cbb4c0b51119d8c2f9c7af
 </template>
 
 <script>
@@ -191,7 +284,7 @@ export default {
     },
     methods: {
         generateQRCode() {
-            this.qrCodeUrl = "/images/qrcode.png";
+            this.qrCodeUrl = "/images/qr-taffy.jpg";
             this.showQRcode = true;
         },
     },

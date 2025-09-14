@@ -82,7 +82,7 @@
                 <div class="row mx-0 justify-content-end  mt-5">
                     <div class="col-md-12 text-end">
 
-                        <Link :href="route('index')">
+                        <Link :href="route('scan')">
                         <PrimaryButton class="qr-btn cancle-btn py-2 px-4 fw-semibold mx-2" label="Cancle" />
                         </Link>
                         <Link>

@@ -76,6 +76,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'inertia' => \App\Http\Middleware\HandleInertiaRequests::class,
         'profile.activate' => \App\Http\Middleware\ActivateBackendUser::class,
+        'session.check' => \App\Http\Middleware\SessionCheck::class,
     ];
 
         // IdentifyTenant must be prioritized before Authenticate
