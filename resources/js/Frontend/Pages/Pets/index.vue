@@ -98,7 +98,7 @@
                             <td class="py-3 custom-color">
                                 <div>
                                     <Link
-                                        v-if="$page.props.user == 'jagath'"
+                                        v-if="$page.props.user == 'jagath' || $page.props.user == 'amith'"
                                         :href="route('pets.edit', pet.id)"
                                         ><i
                                             class="fa-solid fa-pen text-black mx-2"
